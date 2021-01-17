@@ -141,3 +141,5 @@ bundle exec ridgepole -c database.yml -E $environment -f Schemafile --apply --dr
 bundle exec ridgepole -c database.yml -E $environment -f Schemafile --apply
 ```
 
+### Troubleshoot
+-> https://qiita.com/hakshu/items/2f1a6eb3636be78bbc02
