@@ -85,3 +85,25 @@ kafka-console-consumer --bootstrp-server 127.0.0.1:9092 --topic first_topic [--f
   - [--from-beginning] : to read message from beginning
 
 ```
+
+### Kafka consumer group `kafka-consumer-groups`
+List, describe, delete or reset consumers groups
+```
+# list all consumer groups
+kafka-consumer-groups --bootstrp-server localhost:9092 --list
+
+# describe a consumer group
+kafka-consumer-groups --bootstrp-server localhost:9092 --describe --group my-first-group
+
+# messages LAG information
+kafka-console-consumer --bootstrp-server localhost:9092 --topic first_topic --group my-first-group
+
+# reset offset
+kafka-console-consumer --bootstrp-server localhost:9092 --group my-first-group --reset-offsets --to-earliest --execute --topic first_topic
+
+```
+
+### Bonus
+Confluent certification: https://www.confluent.io/certification
+
+kafkacat: https://medium.com/@coderunner/debugging-with-kafkacat-df7851d21968
